@@ -9,7 +9,9 @@ const usersRouter = require("./Routes/user.route");
 
 app.use(express.json());
 
-
+app.get("/", (req, res) => {
+    res.status(200).send('Home Page');
+});
 
 
 app.use(usersRouter);
