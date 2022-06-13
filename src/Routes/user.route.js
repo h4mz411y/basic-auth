@@ -10,14 +10,13 @@ const usersRouter = express.Router();
 
 usersRouter.post("/signup", SignUp);
 usersRouter.post("/signin", Signin);
-usersRouter.get("/Users", allUsers);
+usersRouter.get("/users", allUsers);
 
 
 async function allUsers (req, res){
     
-        const allUsers = await Users.findAll();
-        console.log("Users page")
-        res.status(200).json(allUsers);
+        const allUsers = await users.findAll();
+        res.status(200).json(allusers);
  
 
 
